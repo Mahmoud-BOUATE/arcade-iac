@@ -35,3 +35,6 @@ resource "docker_container" "borne" {
     source_hash = filesha256("${path.module}/../app/game.js")
   }
 }
+resource "docker_volume" "records" {
+  name = "arcade-records"
+}
